@@ -11,6 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Auth::routes();
+
+Route::get('/', function(){
+	return redirect('login');
 });
+
+Route::group(['middleware'=>'auth'], function(){
+	Route::post('newsletter', 'Newsletter\NewsletterController@enviar');
+	Route::get('newsletter', 'Newsletter\NewsletterController@index');
+});
+
+
+
+
+
+

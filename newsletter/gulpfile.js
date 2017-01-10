@@ -12,8 +12,22 @@ require('laravel-elixir-vue-2');
  | file for our application, as well as publishing vendor resources.
  |
  */
+    
+elixir(function(mix) {
+    mix.styles(
+    	[
+    		'../bower/bootstrap/dist/css/bootstrap.min.css',
+    		'../bower/font-awesome/css/font-awesome.min.css',
+    		'main.css'
+    	], 
+    	'public/css/styles.css');
 
-elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+    mix.scripts(
+	    [
+	    	'../bower/jquery/dist/jquery.min.js',
+	    	'../bower/bootstrap/dist/js/bootstrap.min.js', 
+	    	'main.js'
+	    ],
+	    'public/js/scripts.js'
+	);
 });

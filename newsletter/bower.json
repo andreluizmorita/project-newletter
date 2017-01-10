@@ -1,0 +1,22 @@
+{
+  "name": "newsletter",
+  "description": "",
+  "main": "",
+  "authors": [
+    "André Morita <andreluizmorita@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/andreluizmorita/project-newsletter",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/assets/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "FortAwesome/Font-Awesome#^4.7.0"
+  }
+}
